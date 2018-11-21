@@ -545,6 +545,7 @@ class RunDriverKonanTest extends KonanTest {
             if (enableKonanAssertions) {
                 args "-ea"
             }
+            print(args)
             standardOutput = log
             errorOutput = log
         }
