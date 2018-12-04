@@ -80,8 +80,7 @@ internal val FunctionDescriptor.isIntrinsic: Boolean
     get() = this.descriptor.isIntrinsic
 
 // TODO: Merge with `isIntrinsic`
-internal val FunctionDescriptor.isTypedIntrinsic
-        : Boolean
+internal val FunctionDescriptor.isTypedIntrinsic: Boolean
     get() = this.descriptor.isTypedIntrinsic
 
 internal val DeclarationDescriptor.isFrozen: Boolean

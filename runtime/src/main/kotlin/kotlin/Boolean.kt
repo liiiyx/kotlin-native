@@ -44,7 +44,7 @@ public class Boolean private constructor(
     @TypedIntrinsic(IntrinsicType.XOR)
     external public infix fun xor(other: Boolean): Boolean
 
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
+    @TypedIntrinsic(IntrinsicType.SIGNED_COMPARE_TO)
     external public override fun compareTo(other: Boolean): Int
 
     public fun equals(other: Boolean): Boolean = kotlin.native.internal.areEqualByValue(this, other)

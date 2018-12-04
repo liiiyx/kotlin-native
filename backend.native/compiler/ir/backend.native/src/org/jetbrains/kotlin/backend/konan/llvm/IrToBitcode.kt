@@ -174,7 +174,7 @@ internal fun verifyModule(llvmModule: LLVMModuleRef, current: String = "") {
                 llvmModule, LLVMVerifierFailureAction.LLVMPrintMessageAction, errorRef.ptr) == 1) {
             if (current.isNotEmpty())
                 println("Error in $current")
-            LLVMDumpModule(llvmModule)
+//            LLVMDumpModule(llvmModule)
             throw Error("Invalid module")
         }
     }
@@ -2097,7 +2097,7 @@ internal class CodeGeneratorVisitor(val context: Context, val lifetimes: Map<IrE
                                                args + getContinuation()
                                            else args
         return when {
-            function.isTypedIntrinsic -> intrinsicGenerator.evaluateCall(callee, args, functionGenerationContext, currentCodeContext)
+            function.isTypedIntrinsic -> intrinsicGenerator.evaluateCall(callee, args, functionGenerationContext, currentCodeContext.exceptionHandler)
             function.isIntrinsic -> evaluateIntrinsicCall(callee, argsWithContinuationIfNeeded)
             function.origin == IrDeclarationOrigin.IR_BUILTINS_STUB -> evaluateOperatorCall(callee, argsWithContinuationIfNeeded)
             function is ConstructorDescriptor -> evaluateConstructorCall(callee, argsWithContinuationIfNeeded)

@@ -43,138 +43,138 @@ public final class Byte private constructor(private val value: kotlin.native.int
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
+    @TypedIntrinsic(IntrinsicType.SIGNED_COMPARE_TO)
     external public override operator fun compareTo(other: Byte): Int
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Short): Int
+    public inline operator fun compareTo(other: Short): Int =
+            this.toShort().compareTo(other)
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Int): Int
+    public inline operator fun compareTo(other: Int): Int =
+            this.toInt().compareTo(other)
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Long): Int
+    public inline operator fun compareTo(other: Long): Int =
+            this.toLong().compareTo(other)
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Float): Int
+    public inline operator fun compareTo(other: Float): Int =
+            this.toFloat().compareTo(other)
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Double): Int
+    public inline operator fun compareTo(other: Double): Int =
+            this.toDouble().compareTo(other)
 
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Byte): Int
+    public inline operator fun plus(other: Byte): Int =
+            this.toInt() + other.toInt()
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Short): Int
+    public inline operator fun plus(other: Short): Int =
+            this.toInt() + other.toInt()
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Int): Int
+    public inline operator fun plus(other: Int): Int =
+            this.toInt() + other
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Long): Long
+    public inline operator fun plus(other: Long): Long =
+            this.toLong() + other
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Float): Float
+    public inline operator fun plus(other: Float): Float =
+            this.toFloat() + other
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Double): Double
+    public inline operator fun plus(other: Double): Double =
+            this.toDouble() + other
 
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Byte): Int
+    public inline operator fun minus(other: Byte): Int =
+            this.toInt() - other.toInt()
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Short): Int
+    public inline operator fun minus(other: Short): Int =
+            this.toInt() - other.toInt()
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Int): Int
+    public inline operator fun minus(other: Int): Int =
+            this.toInt() - other
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Long): Long
+    public inline operator fun minus(other: Long): Long =
+            this.toLong() - other
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Float): Float
+    public inline operator fun minus(other: Float): Float =
+            this.toFloat() - other
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Double): Double
+    public inline operator fun minus(other: Double): Double =
+            this.toDouble() - other
 
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Byte): Int
+    public inline operator fun times(other: Byte): Int =
+            this.toInt() * other.toInt()
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Short): Int
+    public inline operator fun times(other: Short): Int =
+            this.toInt() * other.toInt()
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Int): Int
+    public inline operator fun times(other: Int): Int =
+            this.toInt() * other
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Long): Long
+    public inline operator fun times(other: Long): Long =
+            this.toLong() * other
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Float): Float
+    public inline operator fun times(other: Float): Float =
+            this.toFloat() * other
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Double): Double
+    public inline operator fun times(other: Double): Double =
+            this.toDouble() * other
 
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Byte): Int
+    public inline operator fun div(other: Byte): Int =
+            this.toInt() / other.toInt()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Short): Int
+    public inline operator fun div(other: Short): Int =
+            this.toInt() / other.toInt()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Int): Int
+    public inline operator fun div(other: Int): Int =
+            this.toInt() / other
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Long): Long
+    public inline operator fun div(other: Long): Long =
+            this.toLong() / other
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Float): Float
+    public inline operator fun div(other: Float): Float =
+            this.toFloat() / other
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Double): Double
+    public inline operator fun div(other: Double): Double =
+            this.toDouble() / other
 
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Byte): Int
+    public inline operator fun rem(other: Byte): Int =
+            this.toInt() % other.toInt()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Short): Int
+    public inline operator fun rem(other: Short): Int =
+            this.toInt() % other.toInt()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Int): Int
+    public inline operator fun rem(other: Int): Int =
+            this.toInt() % other
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Long): Long
+    public inline operator fun rem(other: Long): Long =
+            this.toLong() % other
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Float): Float
+    public inline operator fun rem(other: Float): Float =
+            this.toFloat() % other
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Double): Double
+    public inline operator fun rem(other: Double): Double =
+            this.toDouble() % other
 
     /** Increments this value. */
     @TypedIntrinsic(IntrinsicType.INC)
@@ -183,25 +183,25 @@ public final class Byte private constructor(private val value: kotlin.native.int
     @TypedIntrinsic(IntrinsicType.DEC)
     external public operator fun dec(): Byte
     /** Returns this value. */
-    @TypedIntrinsic(IntrinsicType.UNARY_PLUS)
-    external public operator fun unaryPlus(): Int
+    public inline operator fun unaryPlus(): Int =
+            this.toInt()
     /** Returns the negative of this value. */
-    @TypedIntrinsic(IntrinsicType.UNARY_MINUS)
-    external public operator fun unaryMinus(): Int
+    public inline operator fun unaryMinus(): Int =
+            -this.toInt()
 
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toByte(): Byte
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.UNSIGNED_CAST)
     external public override fun toChar(): Char
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toShort(): Short
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toInt(): Int
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toLong(): Long
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toFloat(): Float
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toDouble(): Double
 
     /** Creates a range from this value to the specified [other] value. */
@@ -268,138 +268,138 @@ public final class Short private constructor(private val value: kotlin.native.in
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Byte): Int
+    public inline operator fun compareTo(other: Byte): Int =
+            this.compareTo(other.toShort())
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
+    @TypedIntrinsic(IntrinsicType.SIGNED_COMPARE_TO)
     external public override operator fun compareTo(other: Short): Int
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Int): Int
+    public inline operator fun compareTo(other: Int): Int =
+            this.toInt().compareTo(other)
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Long): Int
+    public inline operator fun compareTo(other: Long): Int =
+            this.toLong().compareTo(other)
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Float): Int
+    public inline operator fun compareTo(other: Float): Int =
+            this.toFloat().compareTo(other)
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Double): Int
+    public inline operator fun compareTo(other: Double): Int =
+            this.toDouble().compareTo(other)
 
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Byte): Int
+    public inline operator fun plus(other: Byte): Int =
+            this.toInt() + other.toInt()
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Short): Int
+    public inline operator fun plus(other: Short): Int =
+            this.toInt() + other.toInt()
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Int): Int
+    public inline operator fun plus(other: Int): Int =
+            this.toInt() + other
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Long): Long
+    public inline operator fun plus(other: Long): Long =
+            this.toLong() + other
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Float): Float
+    public inline operator fun plus(other: Float): Float =
+            this.toFloat() + other
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Double): Double
+    public inline operator fun plus(other: Double): Double =
+            this.toDouble() + other
 
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Byte): Int
+    public inline operator fun minus(other: Byte): Int =
+            this.toInt() - other.toInt()
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Short): Int
+    public inline operator fun minus(other: Short): Int =
+            this.toInt() - other.toInt()
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Int): Int
+    public inline operator fun minus(other: Int): Int =
+            this.toInt() - other
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Long): Long
+    public inline operator fun minus(other: Long): Long =
+            this.toLong() - other
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Float): Float
+    public inline operator fun minus(other: Float): Float =
+            this.toFloat() - other
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Double): Double
+    public inline operator fun minus(other: Double): Double =
+            this.toDouble() - other
 
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Byte): Int
+    public inline operator fun times(other: Byte): Int =
+            this.toInt() * other.toInt()
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Short): Int
+    public inline operator fun times(other: Short): Int =
+            this.toInt() * other.toInt()
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Int): Int
+    public inline operator fun times(other: Int): Int =
+            this.toInt() * other
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Long): Long
+    public inline operator fun times(other: Long): Long =
+            this.toLong() * other
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Float): Float
+    public inline operator fun times(other: Float): Float =
+            this.toFloat() * other
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Double): Double
+    public inline operator fun times(other: Double): Double =
+            this.toDouble() * other
 
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Byte): Int
+    public inline operator fun div(other: Byte): Int =
+            this.toInt() / other.toInt()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Short): Int
+    public inline operator fun div(other: Short): Int =
+            this.toInt() / other.toInt()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Int): Int
+    public inline operator fun div(other: Int): Int =
+            this.toInt() / other
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Long): Long
+    public inline operator fun div(other: Long): Long =
+            this.toLong() / other
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Float): Float
+    public inline operator fun div(other: Float): Float =
+            this.toFloat() / other
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Double): Double
+    public inline operator fun div(other: Double): Double =
+            this.toDouble() / other
 
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Byte): Int
+    public inline operator fun rem(other: Byte): Int =
+            this.toInt() % other.toInt()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Short): Int
+    public inline operator fun rem(other: Short): Int =
+            this.toInt() % other.toInt()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Int): Int
+    public inline operator fun rem(other: Int): Int =
+            this.toInt() % other
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Long): Long
+    public inline operator fun rem(other: Long): Long =
+            this.toLong() % other
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Float): Float
+    public inline operator fun rem(other: Float): Float =
+            this.toFloat() % other
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Double): Double
+    public inline operator fun rem(other: Double): Double =
+            this.toDouble() % other
 
     /** Increments this value. */
     @TypedIntrinsic(IntrinsicType.INC)
@@ -408,11 +408,11 @@ public final class Short private constructor(private val value: kotlin.native.in
     @TypedIntrinsic(IntrinsicType.DEC)
     external public operator fun dec(): Short
     /** Returns this value. */
-    @TypedIntrinsic(IntrinsicType.UNARY_PLUS)
-    external public operator fun unaryPlus(): Int
+    public operator fun unaryPlus(): Int =
+            this.toInt()
     /** Returns the negative of this value. */
-    @TypedIntrinsic(IntrinsicType.UNARY_MINUS)
-    external public operator fun unaryMinus(): Int
+    public inline operator fun unaryMinus(): Int =
+            -this.toInt()
 
     /** Creates a range from this value to the specified [other] value. */
     public operator fun rangeTo(other: Byte): IntRange {
@@ -431,19 +431,19 @@ public final class Short private constructor(private val value: kotlin.native.in
         return LongRange(this.toLong(), other.toLong())
     }
 
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toByte(): Byte
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.UNSIGNED_CAST)
     external public override fun toChar(): Char
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toShort(): Short
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toInt(): Int
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toLong(): Long
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toFloat(): Float
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toDouble(): Double
 
     // Konan-specific.
@@ -493,138 +493,138 @@ public final class Int private constructor(private val value: kotlin.native.inte
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Byte): Int
+    public inline operator fun compareTo(other: Byte): Int =
+            this.compareTo(other.toInt())
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Short): Int
+    public inline operator fun compareTo(other: Short): Int =
+            this.compareTo(other.toInt())
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
+    @TypedIntrinsic(IntrinsicType.SIGNED_COMPARE_TO)
     external public override operator fun compareTo(other: Int): Int
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Long): Int
+    public inline operator fun compareTo(other: Long): Int =
+            this.toLong().compareTo(other)
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Float): Int
+    public inline operator fun compareTo(other: Float): Int =
+            this.toFloat().compareTo(other)
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
-    external public operator fun compareTo(other: Double): Int
+    public inline operator fun compareTo(other: Double): Int =
+            this.toDouble().compareTo(other)
 
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Byte): Int
+    public inline operator fun plus(other: Byte): Int =
+            this + other.toInt()
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Short): Int
+    public inline operator fun plus(other: Short): Int =
+            this + other.toInt()
     /** Adds the other value to this value. */
     @TypedIntrinsic(IntrinsicType.PLUS)
     external public operator fun plus(other: Int): Int
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Long): Long
+    public inline operator fun plus(other: Long): Long =
+            this.toLong() + other
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Float): Float
+    public inline operator fun plus(other: Float): Float =
+            this.toFloat() + other
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Double): Double
+    public inline operator fun plus(other: Double): Double =
+            this.toDouble() + other
 
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Byte): Int
+    public inline operator fun minus(other: Byte): Int =
+            this - other.toInt()
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Short): Int
+    public inline operator fun minus(other: Short): Int =
+            this - other.toInt()
     /** Subtracts the other value from this value. */
     @TypedIntrinsic(IntrinsicType.MINUS)
     external public operator fun minus(other: Int): Int
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Long): Long
+    public inline operator fun minus(other: Long): Long =
+            this.toLong() - other
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Float): Float
+    public inline operator fun minus(other: Float): Float =
+            this.toFloat() - other
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Double): Double
+    public inline operator fun minus(other: Double): Double =
+            this.toDouble() - other
 
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Byte): Int
+    public inline operator fun times(other: Byte): Int =
+            this * other.toInt()
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Short): Int
+    public inline operator fun times(other: Short): Int =
+            this * other.toInt()
     /** Multiplies this value by the other value. */
     @TypedIntrinsic(IntrinsicType.TIMES)
     external public operator fun times(other: Int): Int
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Long): Long
+    public inline operator fun times(other: Long): Long =
+            this.toLong() * other
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Float): Float
+    public inline operator fun times(other: Float): Float =
+            this.toFloat() * other
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Double): Double
+    public inline operator fun times(other: Double): Double =
+            this.toDouble() * other
 
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Byte): Int
+    public inline operator fun div(other: Byte): Int =
+            this / other.toInt()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Short): Int
+    public inline operator fun div(other: Short): Int =
+            this / other.toInt()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
+    @TypedIntrinsic(IntrinsicType.SIGNED_DIV)
     external public operator fun div(other: Int): Int
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Long): Long
+    public inline operator fun div(other: Long): Long =
+            this.toLong() / other
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Float): Float
+    public inline operator fun div(other: Float): Float =
+            this.toFloat() / other
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Double): Double
+    public inline operator fun div(other: Double): Double =
+            this.toDouble() / other
 
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Byte): Int
+    public inline operator fun rem(other: Byte): Int =
+            this % other.toInt()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Short): Int
+    public inline operator fun rem(other: Short): Int =
+            this % other.toInt()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
+    @TypedIntrinsic(IntrinsicType.SIGNED_REM)
     external public operator fun rem(other: Int): Int
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Long): Long
+    public inline operator fun rem(other: Long): Long =
+            this.toLong() % other
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Float): Float
+    public inline operator fun rem(other: Float): Float =
+            this.toFloat() % other
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Double): Double
+    public inline operator fun rem(other: Double): Double =
+            this.toDouble() % other
 
     /** Increments this value. */
     @TypedIntrinsic(IntrinsicType.INC)
@@ -633,8 +633,8 @@ public final class Int private constructor(private val value: kotlin.native.inte
     @TypedIntrinsic(IntrinsicType.DEC)
     external public operator fun dec(): Int
     /** Returns this value. */
-    @TypedIntrinsic(IntrinsicType.UNARY_PLUS)
-    external public operator fun unaryPlus(): Int
+    public inline operator fun unaryPlus(): Int =
+            this
     /** Returns the negative of this value. */
     @TypedIntrinsic(IntrinsicType.UNARY_MINUS)
     external public operator fun unaryMinus(): Int
@@ -678,19 +678,19 @@ public final class Int private constructor(private val value: kotlin.native.inte
         return LongRange(this.toLong(), other.toLong())
     }
 
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toByte(): Byte
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.UNSIGNED_CAST)
     external public override fun toChar(): Char
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toShort(): Short
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toInt(): Int
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toLong(): Long
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toFloat(): Float
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toDouble(): Double
 
     // Konan-specific.
@@ -740,138 +740,138 @@ public final class Long private constructor(private val value: kotlin.native.int
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
+    @TypedIntrinsic(IntrinsicType.SIGNED_COMPARE_TO)
     external public operator fun compareTo(other: Byte): Int
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
+    @TypedIntrinsic(IntrinsicType.SIGNED_COMPARE_TO)
     external public operator fun compareTo(other: Short): Int
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
+    @TypedIntrinsic(IntrinsicType.SIGNED_COMPARE_TO)
     external public operator fun compareTo(other: Int): Int
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
+    @TypedIntrinsic(IntrinsicType.SIGNED_COMPARE_TO)
     external public override operator fun compareTo(other: Long): Int
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
+    @TypedIntrinsic(IntrinsicType.SIGNED_COMPARE_TO)
     external public operator fun compareTo(other: Float): Int
     /**
      * Compares this value with the specified value for order.
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
+    @TypedIntrinsic(IntrinsicType.SIGNED_COMPARE_TO)
     external public operator fun compareTo(other: Double): Int
 
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Byte): Long
+    public inline operator fun plus(other: Byte): Long =
+            this + other.toLong()
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Short): Long
+    public inline operator fun plus(other: Short): Long =
+            this + other.toLong()
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Int): Long
+    public inline operator fun plus(other: Int): Long =
+            this + other.toLong()
     /** Adds the other value to this value. */
     @TypedIntrinsic(IntrinsicType.PLUS)
     external public operator fun plus(other: Long): Long
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Float): Float
+    public inline operator fun plus(other: Float): Float =
+            this.toFloat() + other
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Double): Double
+    public inline operator fun plus(other: Double): Double =
+            this.toDouble() + other
 
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Byte): Long
+    public inline operator fun minus(other: Byte): Long =
+            this - other.toLong()
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Short): Long
+    public inline operator fun minus(other: Short): Long =
+            this - other.toLong()
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Int): Long
+    public inline operator fun minus(other: Int): Long =
+            this - other.toLong()
     /** Subtracts the other value from this value. */
     @TypedIntrinsic(IntrinsicType.MINUS)
     external public operator fun minus(other: Long): Long
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Float): Float
+    public inline operator fun minus(other: Float): Float =
+            this.toFloat() - other
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Double): Double
+    public inline operator fun minus(other: Double): Double =
+            this.toDouble() - other
 
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Byte): Long
+    public inline operator fun times(other: Byte): Long =
+            this * other.toLong()
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Short): Long
+    public inline operator fun times(other: Short): Long =
+            this * other.toLong()
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Int): Long
+    public inline operator fun times(other: Int): Long =
+            this * other.toLong()
     /** Multiplies this value by the other value. */
     @TypedIntrinsic(IntrinsicType.TIMES)
     external public operator fun times(other: Long): Long
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Float): Float
+    public inline operator fun times(other: Float): Float =
+            this.toFloat() * other
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Double): Double
+    public inline operator fun times(other: Double): Double =
+            this.toDouble() * other
 
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Byte): Long
+    public inline operator fun div(other: Byte): Long =
+            this / other.toLong()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Short): Long
+    public inline operator fun div(other: Short): Long =
+            this / other.toLong()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Int): Long
+    public inline operator fun div(other: Int): Long =
+            this / other.toLong()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
+    @TypedIntrinsic(IntrinsicType.SIGNED_DIV)
     external public operator fun div(other: Long): Long
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Float): Float
+    public inline operator fun div(other: Float): Float =
+            this.toFloat() / other
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Double): Double
+    public inline operator fun div(other: Double): Double =
+            this.toDouble() / other
 
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Byte): Long
+    public inline operator fun rem(other: Byte): Long =
+            this % other.toLong()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Short): Long
+    public inline operator fun rem(other: Short): Long =
+            this % other.toLong()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Int): Long
+    public inline operator fun rem(other: Int): Long =
+            this % other.toLong()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
+    @TypedIntrinsic(IntrinsicType.SIGNED_REM)
     external public operator fun rem(other: Long): Long
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Float): Float
+    public inline operator fun rem(other: Float): Float =
+            this.toFloat() % other
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Double): Double
+    public inline operator fun rem(other: Double): Double =
+            this.toDouble() % other
 
     /** Increments this value. */
     @TypedIntrinsic(IntrinsicType.INC)
@@ -880,8 +880,8 @@ public final class Long private constructor(private val value: kotlin.native.int
     @TypedIntrinsic(IntrinsicType.DEC)
     external public operator fun dec(): Long
     /** Returns this value. */
-    @TypedIntrinsic(IntrinsicType.UNARY_PLUS)
-    external public operator fun unaryPlus(): Long
+    public inline operator fun unaryPlus(): Long =
+            this
     /** Returns the negative of this value. */
     @TypedIntrinsic(IntrinsicType.UNARY_MINUS)
     external public operator fun unaryMinus(): Long
@@ -925,19 +925,19 @@ public final class Long private constructor(private val value: kotlin.native.int
     @TypedIntrinsic(IntrinsicType.INV)
     external public fun inv(): Long
 
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toByte(): Byte
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.UNSIGNED_CAST)
     external public override fun toChar(): Char
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toShort(): Short
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toInt(): Int
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toLong(): Long
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toFloat(): Float
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toDouble(): Double
 
     // Konan-specific.
@@ -1036,99 +1036,99 @@ public final class Float private constructor(private val value: kotlin.native.in
     public operator fun compareTo(other: Double): Int = - other.compareTo(this)
 
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Byte): Float
+    public inline operator fun plus(other: Byte): Float =
+            this + other.toFloat()
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Short): Float
+    public inline operator fun plus(other: Short): Float =
+            this + other.toFloat()
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Int): Float
+    public inline operator fun plus(other: Int): Float =
+            this + other.toFloat()
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Long): Float
+    public inline operator fun plus(other: Long): Float =
+            this + other.toFloat()
     /** Adds the other value to this value. */
     @TypedIntrinsic(IntrinsicType.PLUS)
     external public operator fun plus(other: Float): Float
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Double): Double
+    public inline operator fun plus(other: Double): Double =
+            this.toDouble() + other
 
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Byte): Float
+    public inline operator fun minus(other: Byte): Float =
+            this - other.toFloat()
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Short): Float
+    public inline operator fun minus(other: Short): Float =
+            this - other.toFloat()
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Int): Float
+    public inline operator fun minus(other: Int): Float =
+            this - other.toFloat()
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Long): Float
+    public inline operator fun minus(other: Long): Float =
+            this - other.toFloat()
     /** Subtracts the other value from this value. */
     @TypedIntrinsic(IntrinsicType.MINUS)
     external public operator fun minus(other: Float): Float
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Double): Double
+    public inline operator fun minus(other: Double): Double =
+            this.toDouble() - other
 
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Byte): Float
+    public inline operator fun times(other: Byte): Float =
+            this * other.toFloat()
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Short): Float
+    public inline operator fun times(other: Short): Float =
+            this * other.toFloat()
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Int): Float
+    public inline operator fun times(other: Int): Float =
+            this * other.toFloat()
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Long): Float
+    public inline operator fun times(other: Long): Float =
+            this * other.toFloat()
     /** Multiplies this value by the other value. */
     @TypedIntrinsic(IntrinsicType.TIMES)
     external public operator fun times(other: Float): Float
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Double): Double
+    public inline operator fun times(other: Double): Double =
+            this.toDouble() * other
 
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Byte): Float
+    public inline operator fun div(other: Byte): Float =
+            this / other.toFloat()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Short): Float
+    public inline operator fun div(other: Short): Float =
+            this / other.toFloat()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Int): Float
+    public inline operator fun div(other: Int): Float =
+            this / other.toFloat()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Long): Float
+    public inline operator fun div(other: Long): Float =
+            this / other.toFloat()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
+    @TypedIntrinsic(IntrinsicType.SIGNED_DIV)
     external public operator fun div(other: Float): Float
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Double): Double
+    public inline operator fun div(other: Double): Double =
+            this.toDouble() / other
 
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Byte): Float
+    public inline operator fun rem(other: Byte): Float =
+            this % other.toFloat()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Short): Float
+    public inline operator fun rem(other: Short): Float =
+            this % other.toFloat()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Int): Float
+    public inline operator fun rem(other: Int): Float =
+            this % other.toFloat()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Long): Float
+    public inline operator fun rem(other: Long): Float =
+            this % other.toFloat()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
+    @TypedIntrinsic(IntrinsicType.SIGNED_REM)
     external public operator fun rem(other: Float): Float
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Double): Double
+    public inline operator fun rem(other: Double): Double =
+            this.toDouble() % other
 
     /** Increments this value. */
     @TypedIntrinsic(IntrinsicType.INC)
@@ -1153,9 +1153,9 @@ public final class Float private constructor(private val value: kotlin.native.in
     external public override fun toInt(): Int
     @SymbolName("Kotlin_Float_toLong")
     external public override fun toLong(): Long
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toFloat(): Float
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toDouble(): Double
 
     public fun equals(other: Float): Boolean = toBits() == other.toBits()
@@ -1259,98 +1259,98 @@ public final class Double private constructor(private val value: kotlin.native.i
     }
 
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Byte): Double
+    public inline operator fun plus(other: Byte): Double =
+            this + other.toDouble()
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Short): Double
+    public inline operator fun plus(other: Short): Double =
+            this + other.toDouble()
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Int): Double
+    public inline operator fun plus(other: Int): Double =
+            this + other.toDouble()
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Long): Double
+    public inline operator fun plus(other: Long): Double =
+            this + other.toDouble()
     /** Adds the other value to this value. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Float): Double
+    public inline operator fun plus(other: Float): Double =
+            this + other.toDouble()
     /** Adds the other value to this value. */
     @TypedIntrinsic(IntrinsicType.PLUS)
     external public operator fun plus(other: Double): Double
 
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Byte): Double
+    public inline operator fun minus(other: Byte): Double =
+            this - other.toDouble()
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Short): Double
+    public inline operator fun minus(other: Short): Double =
+            this - other.toDouble()
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Int): Double
+    public inline operator fun minus(other: Int): Double =
+            this - other.toDouble()
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Long): Double
+    public inline operator fun minus(other: Long): Double =
+            this - other.toDouble()
     /** Subtracts the other value from this value. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Float): Double
+    public inline operator fun minus(other: Float): Double =
+            this - other.toDouble()
     /** Subtracts the other value from this value. */
     @TypedIntrinsic(IntrinsicType.MINUS)
     external public operator fun minus(other: Double): Double
 
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Byte): Double
+    public inline operator fun times(other: Byte): Double =
+            this * other.toDouble()
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Short): Double
+    public inline operator fun times(other: Short): Double =
+            this * other.toDouble()
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Int): Double
+    public inline operator fun times(other: Int): Double =
+            this * other.toDouble()
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Long): Double
+    public inline operator fun times(other: Long): Double =
+            this * other.toDouble()
     /** Multiplies this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.TIMES)
-    external public operator fun times(other: Float): Double
+    public inline operator fun times(other: Float): Double =
+            this * other.toDouble()
     /** Multiplies this value by the other value. */
     @TypedIntrinsic(IntrinsicType.TIMES)
     external public operator fun times(other: Double): Double
 
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Byte): Double
+    public inline operator fun div(other: Byte): Double =
+            this / other.toDouble()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Short): Double
+    public inline operator fun div(other: Short): Double =
+            this / other.toDouble()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Int): Double
+    public inline operator fun div(other: Int): Double =
+            this / other.toDouble()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Long): Double
+    public inline operator fun div(other: Long): Double =
+            this / other.toDouble()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
-    external public operator fun div(other: Float): Double
+    public inline operator fun div(other: Float): Double =
+            this / other.toDouble()
     /** Divides this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.DIV)
+    @TypedIntrinsic(IntrinsicType.SIGNED_DIV)
     external public operator fun div(other: Double): Double
 
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Byte): Double
+    public inline operator fun rem(other: Byte): Double =
+            this % other.toDouble()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Short): Double
+    public inline operator fun rem(other: Short): Double =
+            this % other.toDouble()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Int): Double
+    public inline operator fun rem(other: Int): Double =
+            this % other.toDouble()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Long): Double
+    public inline operator fun rem(other: Long): Double =
+            this % other.toDouble()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
-    external public operator fun rem(other: Float): Double
+    public inline operator fun rem(other: Float): Double =
+            this % other.toDouble()
     /** Calculates the remainder of dividing this value by the other value. */
-    @TypedIntrinsic(IntrinsicType.REM)
+    @TypedIntrinsic(IntrinsicType.SIGNED_REM)
     external public operator fun rem(other: Double): Double
 
     /** Increments this value. */
@@ -1376,9 +1376,9 @@ public final class Double private constructor(private val value: kotlin.native.i
     external public override fun toInt(): Int
     @SymbolName("Kotlin_Double_toLong")
     external public override fun toLong(): Long
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toFloat(): Float
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public override fun toDouble(): Double
 
     public fun equals(other: Double): Boolean = toBits() == other.toBits()

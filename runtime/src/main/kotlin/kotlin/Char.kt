@@ -19,19 +19,18 @@ public class Char private constructor(
      * Returns zero if this value is equal to the specified other value, a negative number if it's less than other,
      * or a positive number if it's greater than other.
      */
-    @TypedIntrinsic(IntrinsicType.COMPARE_TO)
+    @TypedIntrinsic(IntrinsicType.UNSIGNED_COMPARE_TO)
     external public override fun compareTo(other: Char): Int
 
     /** Adds the other Int value to this value resulting a Char. */
-    @TypedIntrinsic(IntrinsicType.PLUS)
-    external public operator fun plus(other: Int): Char
-
+    public inline operator fun plus(other: Int): Char =
+            (this.toInt() + other).toChar()
     /** Subtracts the other Char value from this value resulting an Int. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Char): Int
+    public inline operator fun minus(other: Char): Int =
+            this.toInt() - other.toInt()
     /** Subtracts the other Int value from this value resulting a Char. */
-    @TypedIntrinsic(IntrinsicType.MINUS)
-    external public operator fun minus(other: Int): Char
+    public inline operator fun minus(other: Int): Char =
+            (this.toInt() - other).toChar()
 
     /** Increments this value. */
     @TypedIntrinsic(IntrinsicType.INC)
@@ -46,25 +45,24 @@ public class Char private constructor(
     }
 
     /** Returns the value of this character as a `Byte`. */
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.SIGNED_CAST)
     external public fun toByte(): Byte
     /** Returns the value of this character as a `Char`. */
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
-    external public fun toChar(): Char
+    public inline fun toChar(): Char = this
     /** Returns the value of this character as a `Short`. */
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.UNSIGNED_CAST)
     external public fun toShort(): Short
     /** Returns the value of this character as a `Int`. */
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.UNSIGNED_CAST)
     external public fun toInt(): Int
     /** Returns the value of this character as a `Long`. */
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.UNSIGNED_CAST)
     external public fun toLong(): Long
     /** Returns the value of this character as a `Float`. */
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.UNSIGNED_CAST)
     external public fun toFloat(): Float
     /** Returns the value of this character as a `Double`. */
-    @TypedIntrinsic(IntrinsicType.PRIMITIVE_CAST)
+    @TypedIntrinsic(IntrinsicType.UNSIGNED_CAST)
     external public fun toDouble(): Double
 
     companion object {
