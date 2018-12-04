@@ -85,7 +85,7 @@ internal class IntrinsicGenerator(val codegen: CodeGenerator) {
         return IntrinsicType.valueOf(value)
     }
 
-    // Assuming that we checked for `Instrinsic2` annotation presence.
+    // Assuming that we checked for `TypedInstrinsic` annotation presence.
     fun evaluateCall(callee: IrCall, args: List<LLVMValueRef>,
                      generationContext: FunctionGenerationContext, currentCodeContext: CodeContext
     ): LLVMValueRef = when (getIntrinsicType(callee)) {
