@@ -75,19 +75,16 @@ public inline class Worker @PublishedApi internal constructor(val id: Int) {
             throw RuntimeException("Shall not be called directly")
 
     /**
-     * Schedules execution of an operation on this worker, once the future result is available.
-     * Only works inside a worker context, throws UnsupportedOperationException on the main thread.
-     *
-     *
-     * @return
-     * @throws IllegalStateException if current future has [FutureState.INVALID] or [FutureState.CANCELLED] state
+     * Sets processor called by this worker once the future's state has changed.
+     * Any worker can register its interest in any future state changes by calling [Future.setFutureSubscriber].
      */
-    /*
-    public fun then(code: (T) -> Unit) {
-        //val worker = Worker.current()
-        //if (worker == null) throw UnsupportedOperationException("Only works in worker context")
-
-    }*/
+    public fun <T> setFutureProcessor(@VolatileLambda processor: (Future<T>) -> Unit): Unit =
+            /*
+            * This function is a magical operation, handled by lowering in the compiler, and replaced with call to
+            *   setFutureProcessorInternal(worker, processor)
+            * but first ensuring that `job` parameter  doesn't capture any state.
+            */
+            throw RuntimeException("Shall not be called directly")
 
 
     override public fun toString(): String = "worker $id"
